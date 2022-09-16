@@ -1,0 +1,17 @@
+Problem 0:
+O(3)
+
+Problem 1:
+O(6n+2)
+
+Problem 2:
+O(17n+4)
+
+Problem 3 -Part A:
+O(20n+n*log(n) +3)
+
+Problem 3 -Part B:
+O(7n+n*log(n) +3)
+
+Problem 4
+O(13n+n*log(n) +4)
