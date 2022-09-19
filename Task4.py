@@ -28,17 +28,14 @@ The list of numbers should be print out one per line in lexicographic order with
 def getTextNumbers():
     telephone_numbers =set()
     for text in texts:
-        if text[0][0:3]=="140":
-            telephone_numbers.add(text[0])
-        if text[1][0:3]=="140":
-            telephone_numbers.add(text[1])
+        telephone_numbers.add(text[0])
+        telephone_numbers.add(text[1])
     return telephone_numbers
 
 def getReceivedNumber():
     telephone_numbers =set()
     for call in calls:
-        if call[1][0:3]=="140":
-            telephone_numbers.add(call[1])
+        telephone_numbers.add(call[1])
     return telephone_numbers
 
 
@@ -46,7 +43,7 @@ telemarketers= set()
 textNumber=getTextNumbers()
 receivedNumber=getReceivedNumber()
 for call in calls:
-    if call[0][0:3]=="140":
+    if call[0] not in textNumber and call[0] not in receivedNumber:
         telemarketers.add(call[0])
     
 sortedList= sorted(telemarketers)
